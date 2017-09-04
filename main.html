@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>    
+    <!--<link rel="stylesheet" href="styles.css">-->
+
+    <!-- Importa o Bootstrap -->
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+    <!-- App's JSs -->
+    <script src="blink.js"></script>
+    <script src="transaction.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <img id="site" src="checkout_ingresso_rapido.png" style="width:1360px;" >
+
+      <div style="margin-left:304px; margin-top:-735px; position:absolute;">
+	<label>
+	  Port:
+	  <select id="port-picker"></select>
+	</label>
+      </div>
+
+	<div style="margin-left:600px; margin-top:-570px; position:absolute; opacity:100;">
+	  <div class="btn-group">
+	    <button id="inc-soda" type="button" class="btn btn-primary">+</button>
+	    <button id="dec-soda" type="button" class="btn btn-primary">-</button>
+	  </div>
+	</div>
+
+	<div style="margin-left:600px; margin-top:-610px; position:absolute; opacity:100;">
+	  <input id="num-of-sodas" type="text" style="width: 30px; float: center;" value="0" readonly></input>
+	</div>
+
+	<div style="margin-left:1000px; margin-top:-570px; position:absolute; opacity:100;">
+	  <div class="btn-group">
+	    <button id="inc-burger" type="button" class="btn btn-primary">+</button>
+	    <button id="dec-burger" type="button" class="btn btn-primary">-</button>
+	  </div>
+	</div>
+
+	<div style="margin-left: 1000px; margin-top:-610px; position:absolute; opacity:100;">
+	  <input id="num-of-burgers" type="text" style="width: 30px; float: center;" value="0" readonly></input>
+	</div>
+
+	<div style="margin-left: 400px; margin-top:-520px; position:absolute; opacity:100;">
+	  <button id="show-bill" type="button" class="btn btn-primary">FECHAR A FATURA</button>
+	</div>
+
+	<div id="bill" style="margin-left: 400px; margin-top:-480px; position:absolute; width: 400px; border: 1px solid black; display: none;">
+	  <label style="margin: 10px 10px 10px 10px;">
+	    Cliente: <input id="customer-name" type="text" value="" readonly></input>
+	  </label>
+	  <label style="margin: 10px 10px 10px 10px;">
+	    Total: <input id="bill-total" type="text" value="" size="7" style="margin-left: 13px;" readonly></input>
+	  </label>
+	  <button id="bill-customer" type="button" class="btn btn-primary">CONFIRMA</button>
+	</div>
+	
+      </div>
+  </body>
+</html>
